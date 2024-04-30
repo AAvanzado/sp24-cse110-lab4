@@ -31,3 +31,41 @@ Line 12 prints `3` as it prints the `length` variable which, upon declaration, i
 ## Question 11
 The function will return the list `[50, 100, 150]` because similar to the earlier iterations of the functions, for each element of the `prices` parameter (`[100, 200, 300]`), the `discount` (`0.5`) is applied and then pushed to a new list that is returned at the end of the function.
 
+## Question 12
+A. `student.name`<br/> 
+B. `student['Grad Year']`<br/> 
+C. `student.greeting()`<br/> 
+D. `student['Favorite Teacher'].name`<br/> 
+E. `student.courseLoad[0]`<br/> 
+
+## Question 13
+A. `32`: the `+` operator is used for concatenating strings and there for it converts the `2` into a string and concatenates `3` and `2` into `32`. <br/>
+B. `1`: the `-` operator is an arithmetic operator and thus the `'3'` is converted into an integer and `3 - 2 = 1`. <br/>
+C. `3`: because `3` is an integer, the `+` operator is treated as an arithmetic operation. Then the `null` is treated as a 0 as a result and thus `3 + 0 = 3`. <br/>
+D. `3null`: because the `3` is a string, the `+` operator is treated as a concatenation operation. Then the `null` is treated as a string `'null'` as a result and thus `'3' + 'null' = '3null'`. <br/>
+E. `4`: because one operand of the expression is an integer `3`, the `+` operator is treated as an arithmetic operation. Therefore, the `true` boolean is converted to its integer representation which is `1` and as a result `1 + 3 = 4`. <br/>
+F. `0`: here the `+` operation is interpreted as an arithmetic operation and thus null and false are both converted to `0` and thus `0 + 0 = 0`. <br/>
+G. `3undefined`: because the `'3'` is a string, the `+` operation is treated as a concatenation operation and thus `undefined` is then converted to a string, resulting in `'3' + 'undefined' = '3undefined'`. <br/>
+H. `NaN`: the `-` operation is interpreted as an arithmetic operation and thus it tries to convert both `'3'` and `undefined` into integers. `'3'` is converted to `3` and `undefined` is converted to `NaN`. Therefore, `3 - NaN = NaN`. <br/>
+
+## Question 14
+A. `true`: the `'2'` string is converted to the integer 2 and therefore the comparison is evaluated to `2 > 1` which further evaluates to `true`. <br/>
+B. `false`: since both operands are strings, the comparision evalates them lexicographically and because `'2'` is greater than `'1'`, the comparison evaluates to `false`. <br/>
+C. `true`: the character `'2'` is converted from a string to an integer and thus `2 == 2` evaluates to `true`. <br/>
+D. `false`: the `===` operation is a comparison that does not do any type conversions and therefore, because `2` and `'2'` are an integer and string respectively, the comparison evaluates to `false`. <br/>
+E. `false`: the boolean `true` is converted to the integer `1` and thus the comparison `1 == 2` evaluates to `false`. <br/>
+F. `true`: any non-zero number converted to a boolean is evaulated as `true`, therefore, since both operands are of the same type and evaulates to `true`, the entire comparison evaluates to `true`. <br/>
+
+## Question 15
+The difference between `==` and `===` is that `==` allows for type conversions between the operands while `===` does not.
+
+## Question 17
+The result will be `[2,4,6]`. The following is a trace of the function:
+1. modify array is called with parameters `[1,2,3]` array and `doSomething` function.
+2. a `newArr` array is created to store the results
+3. the for loop iterates through the array parameter `[1,2,3]` and for each element, it takes that element and applies the `callback` function on it (which in this case is the `doSomething` function which muliplies the input by 2).
+4. In this case, this means that each element of `[1,2,3]` is muliplied by 2.
+5. Then each result of applying the `doSomething` function to an element is pushed to `newArr` resulting in `newArr` being `[2,4,6]`.
+
+## Question 19
+The output of the code is `1`,`4`,`3`, then `2`. This is because `console.log(1)` and `console.log(4)` run instantly first because they were not called with `setTimeout`, `console.log(3)` then runs after as its it was called with `setTimeout` with a delay of 0 miliseconds. Finally after 1000 miliseconds pass, `console.log(2)` is called as it was called with `setTimeout` with a delay of 1000 miliseconds.
